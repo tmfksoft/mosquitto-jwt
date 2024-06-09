@@ -9,6 +9,9 @@ RUN mkdir /etc/mosquitto/plugin
 # https://github.com/wiomoc/mosquitto-jwt-auth
 COPY libmosquitto_jwt_auth.so /etc/mosquitto/plugin/
 
+# Copy in a static HTML page
+COPY html /etc/mosquitto/html
+
 # Copy in our config
 COPY mosquitto.conf /etc/mosquitto/conf.d/
 
